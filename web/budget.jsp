@@ -83,6 +83,7 @@
                                         <tr>
                                             <td>Repairs</td>
                                             <td><%=request.getAttribute("Ramount")%></td>
+
                                         </tr>
                                         <tr>
                                             <td>Rental</td>

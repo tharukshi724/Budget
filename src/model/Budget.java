@@ -12,6 +12,7 @@ public class Budget {
      double empPayments;
 
     public Budget(double repairAmount) {
+         this.repairAmount = repairAmount;
     }
 
     public Budget(String month, Double repairAmount, double rentalAmount, double inventoryExpenses, double empPayments) {

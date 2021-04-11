@@ -15,6 +15,7 @@
     <title>Budget</title>
 </head>
 <body>
+
 <div class="container">
     <div class="content">
         <div class="sidebar">
@@ -49,21 +50,20 @@
         </div>
 
         <div class="main-content">
+
+
             <div class="maintitle">
                 <h1>Budget</h1>
             </div>
 
             <button class="report-button">Budget Report</button>
 
-
-
-
-
-            <div class="wrapper">
-
-                <input type="text" class="input" name="month">
-                <a type="button" class="month-button" href="<%=request.getContextPath()%>/budgetServlet" >Month</a>
+            <form method="post" action="<%=request.getContextPath()%>/budgetServlet">
+                <div class="wrapper">
+                  <input type="text" class="input" name="month">
+                    <button>Month</button>
             </div>
+            </form>
 
 
 
@@ -79,12 +79,10 @@
                                     <h3 class="title">Income</h3>
                                 </div>
                                 <div class="pricing-content">
-
-                                  "
                                     <table>
                                         <tr>
                                             <td>Repairs</td>
-                                            <td><%=request.getAttribute("Budget.getRepairAmount()")%></td>
+                                            <td><%=request.getAttribute("Ramount")%></td>
                                         </tr>
                                         <tr>
                                             <td>Rental</td>

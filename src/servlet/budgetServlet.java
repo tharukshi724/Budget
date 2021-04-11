@@ -13,17 +13,19 @@ import java.sql.SQLException;
 
 @WebServlet("/budgetServlet")
 public class budgetServlet extends HttpServlet {
-    budgetService budgetservice;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String month = request.getParameter("month");
+        budgetService budgetservice = new budgetService();
+        Budget b =budgetservice.AllMethods(month);
+        System.out.println(b.getRepairAmount());
+        request.setAttribute("Ramount",b.getRepairAmount());
+        request.getRequestDispatcher("budget.jsp").forward(request,response);
+
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String month = request.getParameter("month");
 
-
-        budgetservice.AllMethods(month);
-        response.sendRedirect("budget.jsp");
 
 
     }
